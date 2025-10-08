@@ -30,7 +30,7 @@ GUI 窗口分为 5 个核心区域，操作逻辑清晰：
 功能按钮区 | 中间         | 包含 “加密”“解密”“暴力破解”“清空” 4 个操作按钮               
 结果日志区 | 底部         | 显示操作过程、结果、耗时等详细信息（带滚动条）  
 # 代码结构解析
-   `# 核心方法（按执行流程）
+`   # 核心方法（按执行流程）
     def permute(self):        # 通用置换操作
     def left_shift(self):     # 循环左移
     def generate_keys(self):  # 生成K1、K2轮密钥
@@ -43,4 +43,4 @@ GUI 窗口分为 5 个核心区域，操作逻辑清晰：
     def bits_to_string(self): # 二进制列表转字符串
     def encrypt_string(self): # 字符串加密（多块处理）
     def decrypt_string(self): # 字符串解密（多块处理）
-    def brute_force_attack(self): # 多线程暴力破解`
+    def brute_force_attack(self): # 多线程暴力破解 `
