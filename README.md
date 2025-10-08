@@ -30,19 +30,7 @@ GUI 窗口分为 5 个核心区域，操作逻辑清晰：
 功能按钮区 | 中间         | 包含 “加密”“解密”“暴力破解”“清空” 4 个操作按钮               
 结果日志区 | 底部         | 显示操作过程、结果、耗时等详细信息（带滚动条）  
 # 代码结构解析
-# 核心类结构
-`class SDES:  # 算法核心类（无GUI依赖，可独立调用）
-    def __init__(self):  # 初始化：定义所有置换盒、S盒参数
-        self.P10 = [3,5,2,7,4,10,1,9,8,6]  # 10位密钥置换表
-        self.P8 = [6,3,7,4,8,5,10,9]       # 8位密钥选择表
-        self.IP = [2,6,3,1,4,8,5,7]        # 初始置换表
-        self.IP_inv = [4,1,3,5,7,2,8,6]    # 最终置换表
-        self.EP = [4,1,2,3,2,3,4,1]        # 扩展置换表
-        self.P4 = [2,4,3,1]                # 4位置换表
-        self.S0/S1 = [...]                 # S盒替换表
-        self.LS1/LS2 = [...]               # 左移参数`
-    
-    `# 核心方法（按执行流程）
+   `# 核心方法（按执行流程）
     def permute(self):        # 通用置换操作
     def left_shift(self):     # 循环左移
     def generate_keys(self):  # 生成K1、K2轮密钥
@@ -56,12 +44,3 @@ GUI 窗口分为 5 个核心区域，操作逻辑清晰：
     def encrypt_string(self): # 字符串加密（多块处理）
     def decrypt_string(self): # 字符串解密（多块处理）
     def brute_force_attack(self): # 多线程暴力破解`
-
-`class SDESGUI:  # GUI交互类（依赖Tkinter）
-    def __init__(self, master):  # 初始化窗口
-    def setup_gui(self):         # 构建界面（输入框、按钮、日志区）
-    def encrypt(self):           # 加密按钮点击事件
-    def decrypt(self):           # 解密按钮点击事件
-    def brute_force(self):       # 暴力破解按钮点击事件
-    def clear(self):             # 清空按钮点击事件
-    def log_result(self):        # 日志输出`
