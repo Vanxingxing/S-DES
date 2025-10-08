@@ -42,7 +42,7 @@ GUI 窗口分为 5 个核心区域，操作逻辑清晰：
         self.S0/S1 = [...]                 # S盒替换表
         self.LS1/LS2 = [...]               # 左移参数`
     
-    # 核心方法（按执行流程）
+    `# 核心方法（按执行流程）
     def permute(self):        # 通用置换操作
     def left_shift(self):     # 循环左移
     def generate_keys(self):  # 生成K1、K2轮密钥
@@ -55,7 +55,7 @@ GUI 窗口分为 5 个核心区域，操作逻辑清晰：
     def bits_to_string(self): # 二进制列表转字符串
     def encrypt_string(self): # 字符串加密（多块处理）
     def decrypt_string(self): # 字符串解密（多块处理）
-    def brute_force_attack(self): # 多线程暴力破解
+    def brute_force_attack(self): # 多线程暴力破解`
 
 `class SDESGUI:  # GUI交互类（依赖Tkinter）
     def __init__(self, master):  # 初始化窗口
